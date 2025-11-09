@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaitali - Mehandi Artist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo"> Chaitali - Mehandi Artist</h1>
+            <a href="tel:+919730094835" class="btn-call-owner">Call Owner</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container booking-container">
+            <h2>Request Your Booking Date</h2>
+            
+            <section class="selection-steps">
+                <h3>1. Select Date</h3>
+
+                <div class="input-group">
+                    <label for="date-picker">Preferred Date:</label>
+                    <input type="date" id="date-picker" required>
+                </div>
+
+                </section>
+
+            <form id="booking-form" class="booking-form">
+                <h3>2. Enter Contact & Service Details</h3>
+
+                <div class="input-group">
+                    <label for="service-type">Service Type:</label>
+                    <select id="service-type" name="service" required>
+                        <option value="" disabled selected>Select a Option</option>
+                        <option value="Bridal Mehandi">Bridal Mehandi</option>
+                        <option value="Arabic Mehandi">Arabic Mehandi</option>
+                        <option value="Engagement Mehandi">Engagement Mehandi</option>
+                        <option value="Baby Shower Mehandi">Baby Shower Mehandi</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="client-name">Your Full Name:</label>
+                    <input type="text" id="client-name" name="name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="client-email">Email:</label>
+                    <input type="email" id="client-email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="client-phone">Phone Number:</label>
+                    <input type="tel" id="client-phone" name="phone" placeholder="+91..." required>
+                </div>
+                
+                <section class="address-details">
+                    <h3>3. Address Details</h3>
+                    <div class="input-group">
+                        <label for="client-address1">Address Line 1 (Street/Locality):</label>
+                        <input type="text" id="client-address1" name="address1" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="client-address2">Address Line 2 (Apt/Suite - Optional):</label>
+                        <input type="text" id="client-address2" name="address2">
+                    </div>
+                    <div class="input-group">
+                        <label for="client-city">City/Town:</label>
+                        <input type="text" id="client-city" name="city" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="client-postal">Postal Code / Zip Code:</label>
+                        <input type="text" id="client-postal" name="postal" required>
+                    </div>
+                </section>
+                <button type="submit" id="submit-btn" class="btn-submit">
+                    <i class="fa-solid fa-check-circle"></i> Send Booking Request
+                </button>
+            </form>
+
+            <div id="booking-summary" class="success-summary" style="display: none;">
+                <h3>✅ Booking Request Sent!</h3>
+                <p>Thank you, <strong id="summary-name"></strong>! We have received your request and will contact you shortly to confirm the exact time.</p>
+                
+                <div class="summary-details">
+                    <div><strong>Service:</strong> <span id="summary-service"></span></div>
+                    <div><strong>Requested Date:</strong> <span id="summary-date"></span></div>
+                    </div>
+
+                <p>Please click below to send a final confirmation summary via WhatsApp to the owner for quicker processing.</p>
+
+                <button id="send-whatsapp-btn" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Send WhatsApp Request Summary
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            </div>
+    </footer>
+             <footer>Made with ❤️ — Chaitali - Mehandi Artist</footer>
+    <script src="script.js"></script>
+</body>
+</html>
